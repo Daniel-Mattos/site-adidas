@@ -30,7 +30,7 @@ export const Wrapper = styled.div`
   align-items: center;
 `
 export const BuscarInputContainer = styled.div`
-  width: 8rem;
+  width: auto;
   height: 2.5rem;
   background: #2d2d37;
   border-radius: 0.2rem;
@@ -44,7 +44,7 @@ export const BuscarInputContainer = styled.div`
 export const Menu = styled.a`
   font-family: "Open Sans";
   font-style: normal;
-  font-size: 1rem;
+  font-size: 1.1rem;
   line-height: 1.5rem;
   color: #fff;
   text-decoration: none;
@@ -70,5 +70,11 @@ export const Input = styled.input`
   background: transparent;
   flex: 1;
   border: 0;
+  color: #fff;
+  padding-left: 1rem;
+`
+export const LogoPicture = styled.img`
+  width: 2rem;
+  height: 2rem;
   color: #fff;
 `

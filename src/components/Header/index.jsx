@@ -7,25 +7,38 @@ import {
   Menu,
   MenuRight,
   Input,
+  LogoPicture,
+  UserPicture,
 } from "./styles"
 import { Button } from "../Button"
+import logo from "../../assets/img/adidas-br.png"
 
-const Header = () => {
+const Header = ({ autenticado }) => {
   return (
     <Wrapper>
       <HeaderContainer>
         <Row>
-            <img src="/logo.png" alt="Logo" />
-          <BuscarInputContainer>
-            <Input type="text" placeholder="Search..." />
-          </BuscarInputContainer>
-          <Menu>Live code</Menu>
-          <Menu>global</Menu>
+          <LogoPicture src={logo} alt="Logo da adidas" />
+          {autenticado ? (
+            <>
+              <BuscarInputContainer>
+                <Input type="text" placeholder="Search..." />
+              </BuscarInputContainer>
+              <Menu>Live code</Menu>
+              <Menu>global</Menu>
+            </>
+          ) : null}
         </Row>
         <Row>
-          <MenuRight href="#">Home</MenuRight>
-          <Button title="Entrar" />
-          <Button title="Cadastrar" />
+          {autenticado ? (
+            <UserPicture src="https://avatars.githubusercontent.com/u/84470634?v=4" />
+          ) : (
+            <>
+              <MenuRight href="#">Home</MenuRight>
+              <Button title="Entrar" />
+              <Button title="Cadastrar" />
+            </>
+          )}
         </Row>
       </HeaderContainer>
     </Wrapper>

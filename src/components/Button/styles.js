@@ -18,13 +18,18 @@ export const ButtonContainer = styled.button`
 
       background: #e4105D;
 
+      &:hover{
+        opacity: 0.6;
+        cursor: pointer;
+      }
+
       &::after {
-        content: "";
+        content: '';
         position: absolute;
         border:1px solid #e4105D;
         top: -5px;
         left: -6px;
-        width:calc(100%+10px)
+        width: calc(100% + 10px);
         height: calc(100% + 10px);
         border-radius: 1.5rem;
       }
