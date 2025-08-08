@@ -8,7 +8,7 @@ export const Container = styled.main`
 
   display: flex;
   flex-direction: row;
-  juustify-content: space-between;
+  justify-content: space-between;
   align-items: center;
 `
 export const Title = styled.h2`
@@ -57,10 +57,20 @@ export const CriarText = styled.p`
   line-height: 1.1rem;
   opacity: 0.4;
   text-decoration-line: underline;
+  cursor: pointer;
 `
 
 export const Wrapper = styled.div`
   max-width: 18.5rem;
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    min-width: 8rem;
+    width: 20rem;
+    min-height: 9rem;
+    justify-content:space-between;
+  }
 `
 export const Column = styled.div`
   flex: 1;

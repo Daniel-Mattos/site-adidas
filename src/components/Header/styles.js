@@ -57,7 +57,7 @@ export const MenuRight = styled.a`
   line-height: 1.5rem;
   color: #fff;
   text-decoration: none;
-  margin: 0 0.5rem;
+  margin: 0 .8rem;
 `
 
 export const UserPicture = styled.img`

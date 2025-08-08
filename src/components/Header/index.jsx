@@ -12,8 +12,20 @@ import {
 } from "./styles"
 import { Button } from "../Button"
 import logo from "../../assets/img/adidas-br.png"
+import { useNavigate } from "react-router-dom"
 
 const Header = ({ autenticado }) => {
+
+  const navigate = useNavigate()
+
+  const handleClickSingIn = () => {
+    navigate("/login")
+  }
+
+  const handleClickRegister = () => {
+    navigate("/register")
+  }
+
   return (
     <Wrapper>
       <HeaderContainer>
@@ -35,8 +47,8 @@ const Header = ({ autenticado }) => {
           ) : (
             <>
               <MenuRight href="/">Home</MenuRight>
-              <Button title="Entrar" />
-              <Button title="Cadastrar" />
+              <Button title="Entrar" onClick={handleClickSingIn} />
+              <Button title="Cadastrar" onClick={handleClickRegister}/>
             </>
           )}
         </Row>

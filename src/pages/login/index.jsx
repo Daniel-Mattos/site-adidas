@@ -19,6 +19,8 @@ import { yupResolver } from "@hookform/resolvers/yup"
 import { api } from "../../services/api"
 import * as yup from "yup"
 
+const corIcon = `#8647AD`
+
 const schema = yup
   .object({
     email: yup.string().email("email invalido").required("campo obrigatorio"),
@@ -56,6 +58,11 @@ const Login = () => {
 
   const navigate = useNavigate()
 
+  const handleClickRegister = () => {
+    navigate("/register")
+  }
+
+
   return (
     <>
       <Header />
@@ -77,7 +84,7 @@ const Login = () => {
                 name="email"
                 errorMessage={errors?.email?.message}
                 placeholder="E-mail"
-                leftIcon={<MdEmail />}
+                leftIcon={<MdEmail color={corIcon}/>}
               />
               <Input
                 control={control}
@@ -85,13 +92,13 @@ const Login = () => {
                 errorMessage={errors?.password?.message}
                 placeholder="Senha"
                 type="password"
-                leftIcon={<MdLock />}
+                leftIcon={<MdLock color={corIcon}/>}
               />
               <Button title="Entrar" variant="secondary" type="submit" />
             </form>
             <Row>
               <EsqueciText>Esqueci minha senha</EsqueciText>
-              <CriarText>Criar conta ?</CriarText>
+              <CriarText onClick={handleClickRegister}>Criar conta ?</CriarText>
             </Row>
           </Wrapper>
         </Column>
