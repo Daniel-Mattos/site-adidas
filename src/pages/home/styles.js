@@ -8,7 +8,7 @@ export const Container = styled.main`
 
   display: flex;
   flex-direction: row;
-  juustify-content: space-between;
+  justify-content: space-between;
   align-items: center;
 `
 export const Title = styled.h2`
@@ -38,6 +38,6 @@ export const TextContent = styled.p`
   collor: #fff;
 `
 export const Banner = styled.img`
-  width: 10rem;
-  height: 10rem;
+  width: 17rem;
+  height: 17rem;
 `

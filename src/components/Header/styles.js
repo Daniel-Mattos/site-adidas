@@ -24,7 +24,7 @@ export const Column = styled.div`
 export const Wrapper = styled.div`
   background-color: #151515;
   width: 100%;
-  height: 3rem;
+  height: 4rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -74,7 +74,7 @@ export const Input = styled.input`
   padding-left: 1rem;
 `
 export const LogoPicture = styled.img`
-  width: 2rem;
-  height: 2rem;
+  width: 4rem;
+  height: 4rem;
   color: #fff;
 `

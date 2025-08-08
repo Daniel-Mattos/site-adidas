@@ -34,7 +34,7 @@ const Header = ({ autenticado }) => {
             <UserPicture src="https://avatars.githubusercontent.com/u/84470634?v=4" />
           ) : (
             <>
-              <MenuRight href="#">Home</MenuRight>
+              <MenuRight href="/">Home</MenuRight>
               <Button title="Entrar" />
               <Button title="Cadastrar" />
             </>

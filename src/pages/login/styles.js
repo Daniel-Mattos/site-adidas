@@ -46,8 +46,8 @@ export const EsqueciText = styled.p`
   font-weight: 700;
   font-size: .8rem;
   line-height: 1.1rem;
-
-  color: #e5e044;
+  opacity: 0.4;
+  text-decoration-line: underline;
 `
 export const CriarText = styled.p`
   font-family: "Open Sans";
@@ -55,8 +55,8 @@ export const CriarText = styled.p`
   font-weight: 700;
   font-size: .8rem;
   line-height: 1.1rem;
-
-  color: #e23dd7;
+  opacity: 0.4;
+  text-decoration-line: underline;
 `
 
 export const Wrapper = styled.div`
