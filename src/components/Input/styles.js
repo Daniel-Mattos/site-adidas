@@ -13,7 +13,11 @@ export const InputContainer = styled.div`
 export const IconContainer = styled.div`
   margin-right: 0.75rem;
 `
-
+export const ErrorText = styled.p`
+  color: #ff0000;
+  font-size: 0.8rem;
+  margin: 0.2rem 0;
+`
 export const InputText = styled.input`
   background: transparent;
   color: #fff;

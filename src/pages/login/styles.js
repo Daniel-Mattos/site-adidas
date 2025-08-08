@@ -44,7 +44,7 @@ export const EsqueciText = styled.p`
   font-family: "Open Sans";
   font-style: normal;
   font-weight: 700;
-  font-size: .8rem;
+  font-size: 0.8rem;
   line-height: 1.1rem;
   opacity: 0.4;
   text-decoration-line: underline;
@@ -53,7 +53,7 @@ export const CriarText = styled.p`
   font-family: "Open Sans";
   font-style: normal;
   font-weight: 700;
-  font-size: .8rem;
+  font-size: 0.8rem;
   line-height: 1.1rem;
   opacity: 0.4;
   text-decoration-line: underline;
@@ -67,9 +67,9 @@ export const Column = styled.div`
 `
 
 export const Row = styled.div`
-  display: flex;    
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 1.5rem;
-    `
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1.5rem;
+`
