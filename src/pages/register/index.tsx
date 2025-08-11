@@ -6,7 +6,7 @@ import {
   CardRigth,
   Text,
   TextHightlight,
-  RegisterText
+  RegisterText,
 } from "./styles"
 import { Header } from "../../components/Header"
 import { Input } from "../../components/Input"
@@ -17,6 +17,7 @@ import { api } from "../../services/api"
 import { useNavigate } from "react-router-dom"
 import * as yup from "yup"
 import { Button } from "../../components/Button"
+import { IRegister } from "./types"
 
 const corIcon = `#8647AD`
 
@@ -43,7 +44,7 @@ const Register = () => {
     mode: "onSubmit",
   })
 
-  const onSubmit = async (formData) => {
+  const onSubmit = async (formData: IRegister) => {
     try {
       const { data } = await api.post(`/users`, {
         name: formData.name,
@@ -56,7 +57,9 @@ const Register = () => {
         navigate("/login")
       }
     } catch (e) {
-      alert("Não foi possível fazer o cadastro. Verifique se o e-mail já está em uso.")
+      alert(
+        "Não foi possível fazer o cadastro. Verifique se o e-mail já está em uso."
+      )
     }
   }
 
@@ -69,8 +72,9 @@ const Register = () => {
       <Header />
       <Container>
         <Title>
-          A plataforma para você usar o que os atletas usam, dominar as principais
-          utilização dos atetlas e se tornar mais rápido um atleta profissional.
+          A plataforma para você usar o que os atletas usam, dominar as
+          principais utilização dos atetlas e se tornar mais rápido um atleta
+          profissional.
         </Title>
         <CardRigth>
           <Title>Veja agora como funciona</Title>
@@ -82,7 +86,7 @@ const Register = () => {
               errorMessage={errors?.name?.message}
               placeholder="Nome completo"
               type="text"
-              leftIcon={<MdPerson color={corIcon}/>}
+              leftIcon={<MdPerson color={corIcon} />}
             />
             <Input
               control={control}
@@ -90,7 +94,7 @@ const Register = () => {
               errorMessage={errors?.email?.message}
               placeholder="E-mail"
               type="email"
-              leftIcon={<MdEmail color={corIcon}/>}
+              leftIcon={<MdEmail color={corIcon} />}
             />
             <Input
               control={control}
@@ -98,16 +102,23 @@ const Register = () => {
               errorMessage={errors?.password?.message}
               placeholder="Senha"
               type="password"
-              leftIcon={<MdLock color={corIcon}/>}
+              leftIcon={<MdLock color={corIcon} />}
             />
-            <Button title="Criar minha conta" variant="secondary" type="submit" />
+            <Button
+              title="Criar minha conta"
+              variant="secondary"
+              type="submit"
+            />
           </form>
           <Text>
             Ao clicar em "criar minha conta grátis", declaro que aceito as
             Políticas de Privacidade e os Termos de Uso da DIO.
           </Text>
           <RegisterText>
-            Já tenho conta. <TextHightlight onClick={handleClickLogin}>Fazer login</TextHightlight>
+            Já tenho conta.{" "}
+            <TextHightlight onClick={handleClickLogin}>
+              Fazer login
+            </TextHightlight>
           </RegisterText>
         </CardRigth>
       </Container>

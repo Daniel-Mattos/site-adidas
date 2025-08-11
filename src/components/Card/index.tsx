@@ -11,14 +11,13 @@ import {
 import { FiThumbsUp } from "react-icons/fi"
 import banner from "../../assets/img/backgroundAdidas.png"
 
-
 const Card = () => {
   return (
     <CardContainer>
-      <ImageBackground src={banner} alt="Banner da Adidas"/>
+      <ImageBackground src={banner} alt="Banner da Adidas" />
       <Content>
         <UserInfo>
-          <UserPicture src="https://avatars.githubusercontent.com/u/84470634?v=4"/>
+          <UserPicture src="https://avatars.githubusercontent.com/u/84470634?v=4" />
           <div>
             <h4>Daniel Almeida</h4>
             <p>Há 10 minutos</p>
@@ -29,10 +28,10 @@ const Card = () => {
           <p>Projeto feito com React</p>
         </PostInfo>
         <HasInfo>
-            <h4>#html #css #js</h4>
-            <p>
-                <FiThumbsUp/> 10
-            </p>
+          <h4>#html #css #js</h4>
+          <p>
+            <FiThumbsUp /> 10
+          </p>
         </HasInfo>
       </Content>
     </CardContainer>

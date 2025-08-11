@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "target": "es2020",
+    "module": "esnext", // Usar esnext permite que o bundler resolva os módulos
+    "lib": ["dom", "dom.iterable", "esnext"], // Inclui bibliotecas necessárias para o navegador
+    "jsx": "react-jsx",
+    "allowJs": false,
+    "esModuleInterop": true,
+    "moduleResolution": "bundler",
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "skipLibCheck": true,
+    "isolatedModules": true, // Apenas se o seu bundler usar essa opção (ex: Vite, swc)
+    "resolveJsonModule": true,
+    "noEmit": true // Não emite arquivos de saída, o bundler cuidará disso
+  },
+  "include": [
+    "src",
+    "src/**/*.ts",
+    "src/**/*.tsx"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}

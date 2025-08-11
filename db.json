@@ -11,18 +11,6 @@
       "name": "Maria",
       "email": "maria@email.com",
       "senha": "123456"
-    },
-    {
-      "id": "7448",
-      "name": "sky",
-      "email": "a@gmail.com",
-      "password": "1233151"
-    },
-    {
-      "id": "e11a",
-      "name": "sky",
-      "email": "maria@email.com",
-      "password": "1323456"
     }
   ]
 }

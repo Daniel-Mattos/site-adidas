@@ -18,6 +18,7 @@ import { useForm } from "react-hook-form"
 import { yupResolver } from "@hookform/resolvers/yup"
 import { api } from "../../services/api"
 import * as yup from "yup"
+import { IFormData } from "./types"
 
 const corIcon = `#8647AD`
 
@@ -36,12 +37,12 @@ const Login = () => {
     control,
     handleSubmit,
     formState: { errors },
-  } = useForm({
+  } = useForm<IFormData>({
     resolver: yupResolver(schema),
     mode: "onChange",
   })
 
-  const onSubmit = async (formData) => {
+  const onSubmit = async (formData: IFormData) => {
     try {
       const { data } = await api.get(
         `users?email=${formData.email}&senha=${formData.password}`
@@ -61,7 +62,6 @@ const Login = () => {
   const handleClickRegister = () => {
     navigate("/register")
   }
-
 
   return (
     <>
@@ -84,7 +84,7 @@ const Login = () => {
                 name="email"
                 errorMessage={errors?.email?.message}
                 placeholder="E-mail"
-                leftIcon={<MdEmail color={corIcon}/>}
+                leftIcon={<MdEmail color={corIcon} />}
               />
               <Input
                 control={control}
@@ -92,7 +92,7 @@ const Login = () => {
                 errorMessage={errors?.password?.message}
                 placeholder="Senha"
                 type="password"
-                leftIcon={<MdLock color={corIcon}/>}
+                leftIcon={<MdLock color={corIcon} />}
               />
               <Button title="Entrar" variant="secondary" type="submit" />
             </form>
